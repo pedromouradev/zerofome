@@ -191,16 +191,13 @@
 </script>
 
 <script>
-  // Função para limpar os campos de endereço
   function limpa_formulário_cep() {
     document.getElementById('cidade').value = "";
     document.getElementById('endereco').value = "";
   }
 
-  // Callback para preencher os campos com os dados da API
   function meu_callback(conteudo) {
     if (!("erro" in conteudo)) {
-      // Atualiza os campos com os valores.
       document.getElementById('cidade').value = conteudo.localidade;
       document.getElementById('endereco').value = conteudo.logradouro;
     } else {
@@ -210,11 +207,10 @@
   }
 
   function pesquisacep(valor) {
-    // Remove tudo que não é dígito
     var cep = valor.replace(/\D/g, '');
 
     if (cep !== "") {
-      // Expressão regular para validar o CEP
+
       var validacep = /^[0-9]{8}$/;
 
       if(validacep.test(cep)) {
@@ -237,16 +233,15 @@
     }
   }
 
-  // Máscara para o campo CEP
   function mascaraCEP(event) {
     var tecla = event.key;
     var input = event.target;
     var valor = input.value;
 
-    // Remove tudo que não é número
+ 
     valor = valor.replace(/\D/g, '');
 
-    // Aplica a máscara: 00000-000
+
     if (valor.length > 5) {
       valor = valor.substring(0,5) + '-' + valor.substring(5,8);
     }
