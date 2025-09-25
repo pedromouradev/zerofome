@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zero Fome - Doar</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="css/doar.css" />
+</head>
+
+<body>
+
+  <div id="menu">
+    <a href="index.html">
+      <img src="img/logonova.png" alt="Logo Zero Fome" height="50">
+    </a>
+
+    <ul>
+      <li><a href="quemsomos.html">Quem Somos</a></li>
+      <li><a href="doardinheiro.html">Quero Doar</a></li>
+      <li><a href="cesta.html">Doar cestas</a></li>
+      <li><a href="cadastroOngs.html">Quero ser uma ONG</a></li>
+      <li><a href="cursos.html">Cursos</a></li>
+    </ul>
+    
+    <div class="d-flex align-items-center gap-3">
+      <div class="gtranslate_wrapper"></div>
+      <script>
+        window.gtranslateSettings = {
+          "default_language": "pt",
+          "native_language_names": true,
+          "languages": ["pt", "en"],
+          "wrapper_selector": ".gtranslate_wrapper",
+          "alt_flags": { "en": "usa", "pt": "brazil" }
+        };
+      </script>
+      <script src="https://cdn.gtranslate.net/widgets/latest/fn.js" defer></script>
+      <div id="user">
+        <a href="#"><img src="img/user.png" alt="Usuário" height="30"></a>
+        <a href="entrar.html">Entrar</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container py-5">
+    <h2 style="color: red; text-align: center;">Faça sua Doação</h2><br>
+
+    <div class="d-flex justify-content-center">
+      <form class="w-100" style="max-width: 500px;">
+        <div class="mb-3">
+          <label for="valorDoacao" class="form-label fw-bold">Valor da Doação</label>
+          <input type="text" class="form-control" id="valorDoacao" placeholder="Ex: R$ 50,00">
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label fw-bold">Tipo de Doação</label>
+          <div class="form-check">
+            <input type="radio" name="tipoDoacao" id="doacaoUnica" class="form-check-input" checked>
+            <label for="doacaoUnica" class="form-check-label">Única</label>
+          </div>
+          <div class="form-check">
+            <input type="radio" name="tipoDoacao" id="doacaoRecorrente" class="form-check-input">
+            <label for="doacaoRecorrente" class="form-check-label">Recorrente (mensal)</label>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="seleOng" class="form-label fw-bold">ONG Destinatária</label>
+          <select class="form-select" id="seleOng">
+            <option selected disabled>Selecione uma ONG</option>
+            <option>Alimento Solidário</option>
+            <option>Sementes do Bem</option>
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label fw-bold">Forma de Pagamento</label>
+          <div class="form-check">
+            <input type="radio" name="pagamento" id="pagPix" class="form-check-input">
+            <label for="pagPix" class="form-check-label">Pix</label>
+          </div>
+          <div class="form-check">
+            <input type="radio" name="pagamento" id="pagCartao" class="form-check-input">
+            <label for="pagCartao" class="form-check-label">Cartão de Crédito/Débito</label>
+          </div>
+        </div><br>
+
+        <div class="text-center mt-4">
+          <button type="submit" class="btn btn-danger me-2" style="width: 200px;">Confirmar Doação</button>
+          <a href="cesta.html" class="btn btn-outline-danger" style="width: 200px;">Prefere doar cestas básicas?</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Zero Fome - Todos os direitos reservados.</p>
+    <p>Contato: <a href="mailto:contato@zerofome.org">contato@zerofome.org</a></p>
+    <p>
+      <a href="#">Facebook</a> |
+      <a href="#">Instagram</a> |
+      <a href="#">WhatsApp</a>
+    </p>
+  </footer>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-QNFYLZJ8TJ');
+    </script>
+</body>
+</html>
