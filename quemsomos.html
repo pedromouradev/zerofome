@@ -10,38 +10,38 @@
     <title>Zero Fome - Tela de Quem Somos</title>
 </head>
 <body>
-    <div vw class="enabled">
-        <div vw-access-button class="active"></div>
-        <div vw-plugin-wrapper>
-            <div class="vw-plugin-top-wrapper"></div>
-        </div>
+      <header>
+
+    <div class="grupoLogo">
+        <img src="./img/logonova.png" alt="logo">
     </div>
-    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-    <script>
-        new window.VLibras.Widget('https://vlibras.gov.br/app');
-    </script>
 
-   <div id="menu">
-    <a href="index.html">
-      <img src="img/logonova.png" alt="Logo Zero Fome">
-    </a>
-
-    <ul>
-        <li><a href="quemsomos.html">Quem Somos</a></li>
-        <li><a href="doardinheiro.html">Quero Doar</a></li>
-        <li><a href="cesta.html">Doar cestas</a></li>
-        <li><a href="cadastroOngs.html">Quero ser uma ONG</a></li>
-        <li><a href="cursos.html">Cursos</a></li>
-      </ul>
     
-    <div class="gtranslate_wrapper"></div>
-    <script>window.gtranslateSettings = {"default_language":"pt","native_language_names":true,"languages":["pt","en"],"wrapper_selector":".gtranslate_wrapper","alt_flags":{"en":"usa","pt":"brazil"}}</script>
-    <script src="https://cdn.gtranslate.net/widgets/latest/fn.js" defer></script>
-    <div id="user">
-      <a href="#"><img src="img/user.png" alt="Usuário"></a>
-      <a href="entrar.html">Entrar</a>
-    </div>
-  </div>
+
+    <nav id="menuCabecalho" class="menuFechado">
+        <div class="topo">
+            <h3>Menu</h3>
+            <button class="link btnFechar">[ x ]</button>
+        </div>
+        <a href="index.html">Início</a>
+        <a href="quemsomos.html">Quem somos</a>
+        <a href="doardinheiro.html">Quero doar</a>
+        <a href="cesta.html">Doar cestas</a>
+        <a href="cadastroOngs.html">Quero ser uma ONG</a>
+        <a href="cursos.html">Cursos</a>
+        <div class="gtranslate_wrapper"></div>
+        <script>window.gtranslateSettings = {"default_language":"en","languages":["en","pt"],"wrapper_selector":".gtranslate_wrapper","flag_size":16,"alt_flags":{"pt":"brazil"}}</script>
+        <script src="https://cdn.gtranslate.net/widgets/latest/flags.js" defer></script>
+        <p class="base"><span class="ano"></span> ZERO FOME. Todos os direitos reservados.</p>
+    </nav>
+
+    <button class="botaoMenu">
+        <div class="ret1"></div>
+        <div class="ret2"></div>
+        <div class="ret3"></div>
+    </button>
+
+    </header>
     <div class="container">
     <div id="conteudo">
         <h2 style="color: red; font-size: 3em;">Quem Somos?</h2><br>
@@ -118,6 +118,7 @@
       
         gtag('config', 'G-QNFYLZJ8TJ');
         </script>
+        <script src="./js/scripts.js"></script>
 </body>
 
 </html>
