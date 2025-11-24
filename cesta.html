@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,83 +9,157 @@
     integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
   <script src="js/cesta.js"></script>
   <title>Zero Fome - Cestas Básicas</title>
+
+  <style>
+    /* ===== BOTÃO DE TEMA ===== */
+    #btnTema {
+      position: fixed;
+      top: 50%;
+      left: 20px;
+      transform: translateY(-50%);
+      background-color: #444;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 55px;
+      height: 55px;
+      font-size: 24px;
+      cursor: pointer;
+      z-index: 9999;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s ease;
+    }
+
+    #btnTema:hover {
+      background-color: #666;
+    }
+
+    /* ===== TEMA ESCURO ===== */
+    body.tema-escuro {
+      background-color: #121212 !important;
+      color: #f1f1f1 !important;
+    }
+
+    body.tema-escuro header,
+    body.tema-escuro footer {
+      background-color: #1e1e1e !important;
+    }
+
+    body.tema-escuro a {
+      color: #ffb347 !important;
+    }
+
+    body.tema-escuro .card {
+      background-color: #1f1f1f !important;
+      color: #f1f1f1 !important;
+      border: 1px solid #333 !important;
+    }
+
+    body.tema-escuro .btn-doar {
+      background-color: #ff4d4d !important;
+      color: white !important;
+    }
+
+    body.tema-escuro .btn-outline-danger {
+      border-color: #ff4d4d !important;
+      color: #ffb347 !important;
+    }
+  </style>
 </head>
 
 <body>
-    <header>
+  <!-- BOTÃO FLUTUANTE DE TEMA -->
+  <button id="btnTema" title="Alternar tema">🌙</button>
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
 
+  <header>
     <div class="grupoLogo">
-        <img src="./img/logonova.png" alt="logo">
+      <img src="./img/logonova.png" alt="logo">
     </div>
 
-    
-
     <nav id="menuCabecalho" class="menuFechado">
-        <div class="topo">
-            <h3>Menu</h3>
-            <button class="link btnFechar">[ x ]</button>
-        </div>
-        <a href="index.html">Início</a>
-        <a href="quemsomos.html">Quem somos</a>
-        <a href="doardinheiro.html">Quero doar</a>
-        <a href="cesta.html">Doar cestas</a>
-        <a href="cadastroOngs.html">Quero ser uma ONG</a>
-        <a href="cursos.html">Cursos</a>
-        <div class="gtranslate_wrapper"></div>
-        <script>window.gtranslateSettings = {"default_language":"en","languages":["en","pt"],"wrapper_selector":".gtranslate_wrapper","flag_size":16,"alt_flags":{"pt":"brazil"}}</script>
-        <script src="https://cdn.gtranslate.net/widgets/latest/flags.js" defer></script>
-        <p class="base"><span class="ano"></span> ZERO FOME. Todos os direitos reservados.</p>
+      <div class="topo">
+        <h3>Menu</h3>
+        <button class="link btnFechar">[ x ]</button>
+      </div>
+      <a href="index.html">Início</a>
+      <a href="quemsomos.html">Quem somos</a>
+      <a href="doardinheiro.html">Quero doar</a>
+      <a href="cadastroOngs.html">Quero ser uma ONG</a>
+      <a href="cursos.html">Cursos</a>
+      <div class="gtranslate_wrapper"></div>
+      <script>
+        window.gtranslateSettings = {
+          "default_language": "en",
+          "languages": ["en", "pt"],
+          "wrapper_selector": ".gtranslate_wrapper",
+          "flag_size": 16,
+          "alt_flags": { "pt": "brazil" }
+        }
+      </script>
+      <script src="https://cdn.gtranslate.net/widgets/latest/flags.js" defer></script>
+      <p class="base"><span class="ano"></span> ZERO FOME. Todos os direitos reservados.</p>
     </nav>
 
     <button class="botaoMenu">
-        <div class="ret1"></div>
-        <div class="ret2"></div>
-        <div class="ret3"></div>
+      <div class="ret1"></div>
+      <div class="ret2"></div>
+      <div class="ret3"></div>
     </button>
+  </header>
 
-</header>
   <div class="container py-5">
     <h2 style="color: red; text-align: center;">Doe uma Cesta Básica</h2><br>
 
-    <div class="row g-4">
+    <div class="filho-container">
 
-      <div class="col-md-4">
-        <div class="card card-cesta h-100">
-          <img src="img/variedade-de-vegetais-organicos-em-cesta-de-madeira.jpg" alt="Cesta Pequena"
-            class="card-img-top">
-          <div class="card-body text-center">
-            <h5 class="card-title">Cesta Básica Pequena</h5>
-            <b>R$ 100,00</b>
-            <p class="card-text">Itens essenciais para uma família por uma semana.</p>
-            <a href="teladoacao.html" class="btn btn-doar">Doar</a>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card card-cesta h-100">
+            <img src="img/variedade-de-vegetais-organicos-em-cesta-de-madeira.jpg" alt="Cesta Pequena"
+              class="card-img-top">
+            <div class="card-body text-center">
+              <h5 class="card-title">Cesta Básica Pequena</h5>
+              <b>R$ 100,00</b>
+              <p class="card-text">Itens essenciais para uma família por uma semana.</p>
+              <a href="teladoacao.html" class="btn btn-doar">Doar</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card card-cesta h-100">
+            <img src="img/cestabaica2.jpg" alt="Cesta Média" class="card-img-top">
+            <div class="card-body text-center">
+              <h5 class="card-title">Cesta Básica Média</h5>
+              <b>R$ 130,00</b>
+              <p class="card-text">Ideal para famílias de até 4 pessoas, com alimentos variados.</p>
+              <a href="teladoacao.html" class="btn btn-doar">Doar</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card card-cesta h-100">
+            <img src="img/caixa-de-papelao-com-legumes-e-frutas.jpg" alt="Cesta Grande" class="card-img-top">
+            <div class="card-body text-center">
+              <h5 class="card-title">Cesta Básica Grande</h5>
+              <b>R$ 140,00</b>
+              <p class="card-text">Suficiente para um mês de alimentação de uma família grande.</p>
+              <a href="teladoacao.html" class="btn btn-doar">Doar</a>
+            </div>
           </div>
         </div>
       </div>
-
-      <div class="col-md-4">
-        <div class="card card-cesta h-100">
-          <img src="img/cestabaica2.jpg" alt="Cesta Média" class="card-img-top">
-          <div class="card-body text-center">
-            <h5 class="card-title">Cesta Básica Média</h5>
-            <b>R$ 130,00</b>
-            <p class="card-text">Ideal para famílias de até 4 pessoas, com alimentos variados.</p>
-            <a href="teladoacao.html" class="btn btn-doar">Doar</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="card card-cesta h-100">
-          <img src="img/caixa-de-papelao-com-legumes-e-frutas.jpg" alt="Cesta Grande" class="card-img-top">
-          <div class="card-body text-center">
-            <h5 class="card-title">Cesta Básica Grande</h5>
-            <b>R$ 140,00</b>
-            <p class="card-text">Suficiente para um mês de alimentação de uma família grande.</p>
-            <a href="teladoacao.html" class="btn btn-doar">Doar</a>
-          </div>
-        </div>
-      </div>
-
     </div>
   </div>
 
@@ -100,19 +175,39 @@
     <p>
       <a href="#">Facebook</a> |
       <a href="#">Instagram</a> |
-      <a href="#">WhatsApp</a>
+      <a href="#">WhatsApp</a> |
+      <a href="./entrar.html">admin</a>
     </p>
   </footer>
 
+  <!-- Script do Google Analytics -->
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-  
     gtag('config', 'G-QNFYLZJ8TJ');
-    </script>
-    <script src="./js/scripts.js"></script>
+  </script>
 
+  <script src="./js/scripts.js"></script>
+
+  <!-- ===== SCRIPT DE TROCA DE TEMA ===== -->
+  <script>
+    const btnTema = document.getElementById("btnTema");
+    const body = document.body;
+
+    // Mantém o tema salvo no localStorage
+    if (localStorage.getItem("tema") === "escuro") {
+      body.classList.add("tema-escuro");
+      btnTema.textContent = "☀️";
+    }
+
+    btnTema.addEventListener("click", () => {
+      body.classList.toggle("tema-escuro");
+      const modoEscuroAtivo = body.classList.contains("tema-escuro");
+      btnTema.textContent = modoEscuroAtivo ? "☀️" : "🌙";
+      localStorage.setItem("tema", modoEscuroAtivo ? "escuro" : "claro");
+    });
+  </script>
 </body>
 
 </html>

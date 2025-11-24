@@ -15,6 +15,8 @@
   
       --amarelo: rgb(250,250,50);
   
+      --cor-fundo: #ffffff;
+      --cor-texto: #222222;
   
   
   }
@@ -28,13 +30,19 @@
   }
   
   body{
-      background-color: var(--cinza250);
       margin: 0;
       font-family: Arial, sans-serif;
       height: 100%;
-
+      background-color: var(--cor-fundo);
+      color: var(--cor-texto);
+      font-family: Arial, sans-serif;
+      transition: background-color 0.3s, color 0.3s;
       flex-direction: column;
       min-height: 100vh;
+  }
+  body.tema-escuro {
+    --cor-fundo: #121212;
+    --cor-texto: #f1f1f1;
   }
   
   a{
@@ -119,6 +127,29 @@
   .botaoMenu:hover div{
       background-color: var(--amarelo);
   }
+
+  #botao-tema {
+    position: fixed;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    background-color: #444;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 22px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: background-color 0.3s, transform 0.2s;
+    z-index: 1000;
+  }
+
+  #botao-tema:hover {
+    background-color: #666;
+    transform: translateY(-50%) scale(1.1);
+  }
   
   
   
@@ -175,9 +206,9 @@
           transform: translateX(1rem);
       }
   
-      section{
-        display: none;
-      }
+    #carrosel{
+      display: none;
+    }
       
 
   
@@ -186,7 +217,6 @@
 
        #carrossel {
       background: linear-gradient(90deg, #914040, #9b1212);
-      color: white;
       padding: 50px 20px;
       text-align: center;
       font-size: 1.8em;
@@ -271,7 +301,6 @@
     main {
       flex: 1;
       padding: 20px;
-      background-color: #f4f4f4;
     }
 
     footer {
